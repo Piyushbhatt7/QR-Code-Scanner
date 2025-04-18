@@ -14,6 +14,9 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
       appBar: AppBar(
         title: Text('Generate QR Code'),
       ),
+      body: Center(
+        
+      ),
     );
   }
 }
