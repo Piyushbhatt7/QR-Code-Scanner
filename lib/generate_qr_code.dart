@@ -10,6 +10,10 @@ class GenerateQrCode extends StatefulWidget {
 class _GenerateQrCodeState extends State<GenerateQrCode> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Generate QR Code'),
+      ),
+    );
   }
 }
