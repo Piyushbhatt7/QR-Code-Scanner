@@ -36,7 +36,12 @@ class _HomePageState extends State<HomePage> {
         title: Text('QR Code Scanner and Generator'),backgroundColor: Colors.blue,  
       ),
       body: Center(
-        child: ,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            
+          ],
+        ),
       ),
 
     );
