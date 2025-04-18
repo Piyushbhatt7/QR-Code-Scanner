@@ -33,7 +33,7 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
                child: TextField(
                 controller: urlController,
                 decoration: InputDecoration(
-                  
+                  hintText: 'Enter you data',
                 ),
                ),
                
