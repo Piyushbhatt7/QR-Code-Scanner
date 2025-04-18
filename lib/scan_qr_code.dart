@@ -15,7 +15,12 @@ class _ScanQrCodeState extends State<ScanQrCode> {
         title: Text('QR Code Scanner '),
       ),
       body: Center(
-        
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 30.0,)
+          ],
+        ),
       ),
     );
   }
