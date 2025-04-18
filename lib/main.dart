@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:qr_code/generate_qr_code.dart';
 import 'package:qr_code/scan_qr_code.dart';
 
 void main() {
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: ()
             {
               setState(() {
-                
+                Get.to(GenerateQrCode());
               });
             }, 
             child: Text('Generate QR Code'))
