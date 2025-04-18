@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class GenerateQrCode extends StatefulWidget {
   const GenerateQrCode({super.key});
@@ -10,6 +11,7 @@ class GenerateQrCode extends StatefulWidget {
 class _GenerateQrCodeState extends State<GenerateQrCode> {
 
   TextEditingController urlController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,10 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-
+              if(urlController.text.isNotEmpty)
+              
+              QrImage(data:)
+              
             ],
           ),
         ),
