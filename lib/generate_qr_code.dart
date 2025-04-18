@@ -40,9 +40,9 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
                   ),
                   labelText: 'Enter your data',
                 ),
-               ),
-               
-              )
+               ),  
+              ),
+              SizedBox(height: 10,),
               
             ],
           ),
