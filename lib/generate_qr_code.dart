@@ -30,7 +30,10 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
               SizedBox(height: 10,),
               Container(
                padding: EdgeInsets.only(left: 10, right: 10),
-               child: TextField,
+               child: TextField(
+                controller: urlController,
+                
+               ),
                
               )
               
