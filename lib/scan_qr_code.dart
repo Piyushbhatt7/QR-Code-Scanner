@@ -8,6 +8,7 @@ class ScanQrCode extends StatefulWidget {
 }
 
 class _ScanQrCodeState extends State<ScanQrCode> {
+  String qeResult = 'Scanned Data will appear here';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
