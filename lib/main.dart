@@ -41,9 +41,12 @@ class _HomePageState extends State<HomePage> {
           children: [
             ElevatedButton(onPressed: ()
             {
-
+              setState(() {
+                
+              });
             }, 
-            child: Text('Scan QR Code'))
+            child: Text('Scan QR Code'),),
+
           ],
         ),
       ),
