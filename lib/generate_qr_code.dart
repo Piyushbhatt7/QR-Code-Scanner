@@ -15,7 +15,15 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
         title: Text('Generate QR Code'),
       ),
       body: Center(
-        
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+
+              
+            ],
+          ),
+        ),
       ),
     );
   }
