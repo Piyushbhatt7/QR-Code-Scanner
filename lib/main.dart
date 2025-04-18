@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
             {
 
             }, 
-            child: child)
+            child: Text('Generate QR Code'))
           ],
         ),
       ),
