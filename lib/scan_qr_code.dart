@@ -8,7 +8,7 @@ class ScanQrCode extends StatefulWidget {
 }
 
 class _ScanQrCodeState extends State<ScanQrCode> {
-  String qeResult = 'Scanned Data will appear here';
+  String qrResult = 'Scanned Data will appear here';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _ScanQrCodeState extends State<ScanQrCode> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(height: 30.0,),
-            Text(data, style: TextStyle(color: Colors.black),),
+            Text('$qrResult', style: TextStyle(color: Colors.black),),
             SizedBox(height: 30.0,),
             ElevatedButton(onPressed: ()
             {
