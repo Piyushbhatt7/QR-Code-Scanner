@@ -8,6 +8,8 @@ class GenerateQrCode extends StatefulWidget {
 }
 
 class _GenerateQrCodeState extends State<GenerateQrCode> {
+
+  TextEditingController urlController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,7 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              
+
             ],
           ),
         ),
