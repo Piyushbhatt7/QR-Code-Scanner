@@ -37,7 +37,8 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     
-                  )
+                  ),
+                  labelText: 'Enter your data',
                 ),
                ),
                
