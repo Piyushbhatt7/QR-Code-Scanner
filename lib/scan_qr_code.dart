@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class ScanQrCode extends StatelessWidget {
   const ScanQrCode({super.key});
 
