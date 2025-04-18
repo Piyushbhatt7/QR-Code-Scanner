@@ -18,7 +18,10 @@ class _ScanQrCodeState extends State<ScanQrCode> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 30.0,)
+            SizedBox(height: 30.0,),
+            Text(data, style: TextStyle(color: Colors.black),),
+            SizedBox(height: 30.0,),
+            
           ],
         ),
       ),
