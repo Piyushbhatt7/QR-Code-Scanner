@@ -9,6 +9,10 @@ class ScanQrCode extends StatefulWidget {
 
 class _ScanQrCodeState extends State<ScanQrCode> {
   String qrResult = 'Scanned Data will appear here';
+  Future<void> scanQR () async 
+  {
+    
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
