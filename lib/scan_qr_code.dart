@@ -21,7 +21,10 @@ class _ScanQrCodeState extends State<ScanQrCode> {
             SizedBox(height: 30.0,),
             Text(data, style: TextStyle(color: Colors.black),),
             SizedBox(height: 30.0,),
-            
+            ElevatedButton(onPressed: ()
+            {
+
+            }, child: Text("Scan QR Code"))
           ],
         ),
       ),
