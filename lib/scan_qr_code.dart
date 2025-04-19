@@ -17,7 +17,7 @@ class _ScanQrCodeState extends State<ScanQrCode> {
         '#ff6666', 
         'Cancel', 
         true, 
-        scanMode
+        ScanMode.QR
         );
     }on PlatformException{
       qrResult = 'Failed to read QR Code';
