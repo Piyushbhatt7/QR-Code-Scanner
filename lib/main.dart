@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
             ElevatedButton(onPressed: ()
             {
               setState(() {
-                Get.to(ScanQrCode());
+                Get.to(QRScannerScreen());
               });
             }, 
             child: Text('Scan QR Code'),),
