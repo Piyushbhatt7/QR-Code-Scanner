@@ -13,7 +13,12 @@ class _ScanQrCodeState extends State<ScanQrCode> {
   Future<void> scanQR () async 
   {
     try {
-      final qrCode = await FlutterBarcodeScanner.scanBarcode(lineColor, cancelButtonText, isShowFlashIcon, scanMode)
+      final qrCode = await FlutterBarcodeScanner.scanBarcode(
+        lineColor, 
+        cancelButtonText, 
+        isShowFlashIcon, 
+        scanMode
+        );
     }on PlatformException{
       qrResult = 'Failed to read QR Code';
     }
