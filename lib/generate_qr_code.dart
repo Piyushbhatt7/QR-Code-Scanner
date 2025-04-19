@@ -47,7 +47,7 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
               ElevatedButton(onPressed: ()
               {
                 setState(() {
-                  qrD
+                  qrData = urlController.text.trim();
                 });
               }, child: Text("Generate QR Code"))
               
