@@ -13,7 +13,7 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
   TextEditingController urlController = TextEditingController();
   String qrData = "";
               
-  @override  
+  @override   
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
