@@ -25,7 +25,7 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              if(urlController.text.isNotEmpty)
+              if(qrData.isNotEmpty)
               
               QrImage(data: urlController.text, size: 200),
               SizedBox(height: 10,),
