@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class ScanQrCode extends StatefulWidget {
   const ScanQrCode({super.key});
@@ -12,7 +13,7 @@ class _ScanQrCodeState extends State<ScanQrCode> {
   Future<void> scanQR () async 
   {
     try {
-
+      final qrCode = await FlutterBarcodeScanner.scanBarcode(lineColor, cancelButtonText, isShowFlashIcon, scanMode)
     }on PlatformException{
       qrResult = 'Failed to read QR Code';
     }
