@@ -1,54 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:qr_code_scanner/qr_code_scanner.dart';
 
-class ScanQrCode extends StatefulWidget {
-  const ScanQrCode({super.key});
-
+class QRScannerScreen extends StatefulWidget {
   @override
-  State<ScanQrCode> createState() => _ScanQrCodeState();
+  _QRScannerScreenState createState() => _QRScannerScreenState();
 }
 
-class _ScanQrCodeState extends State<ScanQrCode> {
-  String qrResult = 'Scanned Data will appear here';
-  Future<void> scanQR () async 
-  {
-    try {
-      final qrCode = await FlutterBarcodeScanner.scanBarcode(
-        '#ff6666', 
-        'Cancel', 
-        true, 
-        ScanMode.QR
-        );
+class _QRScannerScreenState extends State<QRScannerScreen> {
+  final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
+  QRViewController? controller;
+  String scannedData = "";
 
-        if(!mounted) return;
-        setState(() {
-          this.qrResult = qrCode.toString();
-        });
-    }on PlatformException{
-      qrResult = 'Failed to read QR Code';
+  @override
+  void reassemble() {
+    super.reassemble();
+    if (controller != null) {
+      controller!.pauseCamera();
+      controller!.resumeCamera();
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('QR Code Scanner '),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(height: 30.0,),
-            Text('$qrResult', style: TextStyle(color: Colors.black),),
-            SizedBox(height: 30.0,),
-            ElevatedButton(onPressed: ()
-            {
-
-            }, child: Text("Scan QR Code"))
-          ],
-        ),
+      appBar: AppBar(title: Text('QR Scanner')),
+      body: Column(
+        children: [
+          Expanded(
+            flex: 4,
+            child: QRView(
+              key: qrKey,
+              onQRViewCreated: _onQRViewCreated,
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Center(
+              child: Text('Scanned Data: $scannedData'),
+            ),
+          ),
+        ],
       ),
     );
+  }
+
+  void _onQRViewCreated(QRViewController controller) {
+    this.controller = controller;
+    controller.scannedDataStream.listen((scanData) {
+      controller.pauseCamera(); // Pause after scanning once
+      setState(() {
+        scannedData = scanData.code ?? 'No data';
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    controller?.dispose();
+    super.dispose();
   }
 }
