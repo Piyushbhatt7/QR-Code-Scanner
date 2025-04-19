@@ -27,8 +27,9 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
 
               if(qrData.isNotEmpty)
               
-              QrImage(data: qrData, size: 200),
-              SizedBox(height: 10,),
+              QrImageView(data: qrData, size: 200),
+
+             SizedBox(height: 10,),
               Container(
                padding: EdgeInsets.only(left: 10, right: 10),
                child: TextField(
