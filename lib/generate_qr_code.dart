@@ -11,6 +11,7 @@ class GenerateQrCode extends StatefulWidget {
 class _GenerateQrCodeState extends State<GenerateQrCode> {
 
   TextEditingController urlController = TextEditingController();
+  String qrData = "";
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,9 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
               SizedBox(height: 10,),
               ElevatedButton(onPressed: ()
               {
-
+                setState(() {
+                  qrD
+                });
               }, child: Text("Generate QR Code"))
               
             ],
