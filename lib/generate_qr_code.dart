@@ -7,7 +7,7 @@ class GenerateQrCode extends StatefulWidget {
   @override
   State<GenerateQrCode> createState() => _GenerateQrCodeState();
 }
-      
+       
 class _GenerateQrCodeState extends State<GenerateQrCode> {
 
   TextEditingController urlController = TextEditingController();
