@@ -15,7 +15,7 @@ class _ScanQrCodeState extends State<ScanQrCode> {
     try {
       final qrCode = await FlutterBarcodeScanner.scanBarcode(
         '#ff6666', 
-        cancelButtonText, 
+        'Cancel', 
         isShowFlashIcon, 
         scanMode
         );
