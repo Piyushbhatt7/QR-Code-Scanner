@@ -11,7 +11,11 @@ class _ScanQrCodeState extends State<ScanQrCode> {
   String qrResult = 'Scanned Data will appear here';
   Future<void> scanQR () async 
   {
-    // 19:02
+    try {
+
+    }on PlatformException{
+      qrResult = 'Failed to read QR Code';
+    }
   }
   @override
   Widget build(BuildContext context) {
